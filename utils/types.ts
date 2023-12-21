@@ -22,3 +22,12 @@ export interface SharedModalProps {
   navigation: boolean
   direction?: number
 }
+
+export interface SVGMapPath {
+  id: string
+  d: string
+  href?: string
+  title?: string
+  color?: string
+  hoverColor?: string
+}
