@@ -1,5 +1,10 @@
-import { NextPage } from "next";
+import { Metadata, NextPage } from "next";
 import Head from "next/head";
+
+export const metadata: Metadata = {
+  title: "Łódzkie - Polskie kluby",
+  description: "",
+};
 
 const LodzVoivodeshipClubs: NextPage = () => {
   return (
