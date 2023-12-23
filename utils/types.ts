@@ -31,3 +31,8 @@ export interface SVGMapPath {
   color?: string
   hoverColor?: string
 }
+
+export type PageProps = {
+  params: { country: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
