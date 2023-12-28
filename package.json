@@ -5,8 +5,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "roots": "npm run next-roots",
-    "roots:watch": "npm run next-roots -w"
+    "roots": "yarn next-roots",
+    "roots:watch": "yarn next-roots -w"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.4",
