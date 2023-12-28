@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import PolandMap from "../../../components/maps/PolandMap";
+import PolandMap from "@components/maps/PolandMap";
 
 const PolishClubs: NextPage = () => {
   return (

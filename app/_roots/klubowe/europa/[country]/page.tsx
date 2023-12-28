@@ -1,6 +1,6 @@
 import { Metadata, NextPage, ResolvingMetadata } from "next";
-import { getSegmentId } from "../../../../utils/getSegmentId";
-import { PageProps } from "../../../../utils/types";
+import { getSegmentId } from "@utils/getSegmentId";
+import { PageProps } from "@utils/types";
 import { countries } from "./countries";
 
 function getCountryName(params: { country: string }) {
