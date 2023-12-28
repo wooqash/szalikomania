@@ -26,7 +26,7 @@ export interface SharedModalProps {
 export interface SVGMapPath {
   id: string
   d: string
-  href?: string
+  href: string
   title?: string
   color?: string
   hoverColor?: string

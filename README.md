@@ -30,3 +30,4 @@ pnpm create next-app --example with-cloudinary nextjs-image-gallery
 
 - Cloudinary API: https://cloudinary.com/documentation/transformation_reference
 - next-root: https://github.com/svobik7/next-roots#how-to-keep-original-routes-within-APP-folder-to-support-rsc
+- svg maps - https://mapsvg.com/maps/poland | https://creativecommons.org/licenses/by/4.0/
