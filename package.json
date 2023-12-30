@@ -11,6 +11,12 @@
     "roots:watch": "yarn next-roots -w",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "*.{css,less,scss,html,json,jsx,js,ts,tsx}": [
+      "prettier --write ."
+    ],
+    "*.{jsx,js,ts,tsx}": "eslint --fix"
+  },
   "dependencies": {
     "@headlessui/react": "^1.7.4",
     "@heroicons/react": "^2.0.13",
