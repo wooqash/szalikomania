@@ -13,9 +13,3 @@ import {generateMetadata as generateMetadataOrigin} from '../../../../../_roots/
 export async function generateMetadata({ params, ...otherProps }:any) {
   return generateMetadataOrigin({ ...otherProps, params, pageHref: compileHref('/en/clubs/europe/:country', params) })
 }
-
-import {generateStaticParams as generateStaticParamsOrigin} from '../../../../../_roots/klubowe/europa/[country]/page'
-
-export async function generateStaticParams() {
-  return generateStaticParamsOrigin({ pageLocale: "en" })
-}
