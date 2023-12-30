@@ -1,9 +1,8 @@
-const path = require('path');
+import { resolve, dirname } from 'path';
+const __dirname = resolve(dirname('')); 
 
-module.exports = {
-  originDir: path.resolve(__dirname, 'app/_roots'),
-  localizedDir: path.resolve(__dirname, 'app/(roots)'),
-  locales: ['en', 'pl'],
-  defaultLocale: 'pl',
-  prefixDefaultLocale: false, // serves "pl" locale on / instead of /pl
-}
+export const originDir = resolve(__dirname, 'app/_roots');
+export const localizedDir = resolve(__dirname, 'app/(roots)');
+export const locales = ['en', 'pl'];
+export const defaultLocale = 'pl';
+export const prefixDefaultLocale = false;
