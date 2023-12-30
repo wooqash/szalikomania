@@ -1,5 +1,5 @@
-import "server-only";
-import { Router, schema } from "next-roots";
+import 'server-only';
+import { Router, schema } from 'next-roots';
 
 export const router = new Router(schema);
 
@@ -16,10 +16,10 @@ export function getPageLocale() {
 // }
 
 export function getContactsHref(locale: string = getPageLocale()) {
-  console.log(router.getHref("/kontakt", { locale }), locale)
-  return router.getHref("/kontakt", { locale });
+  console.log(router.getHref('/kontakt', { locale }), locale);
+  return router.getHref('/kontakt', { locale });
 }
 
 export function getHomeHref(locale: string = getPageLocale()) {
-  return router.getHref("/", { locale });
+  return router.getHref('/', { locale });
 }

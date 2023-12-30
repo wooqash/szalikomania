@@ -1,1 +1,1 @@
-module.exports.routeNames = [{ locale: "en", path: "scarves-for-exchange" }];
+module.exports.routeNames = [{ locale: 'en', path: 'scarves-for-exchange' }];

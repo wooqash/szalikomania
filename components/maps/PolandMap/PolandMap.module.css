@@ -1,8 +1,7 @@
-.map{
-    /* background-color: white; */
+.map {
+  /* background-color: white; */
 }
 
 .map svg path:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-

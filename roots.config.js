@@ -1,5 +1,5 @@
 import { resolve, dirname } from 'path';
-const __dirname = resolve(dirname('')); 
+const __dirname = resolve(dirname(''));
 
 export const originDir = resolve(__dirname, 'app/_roots');
 export const localizedDir = resolve(__dirname, 'app/(roots)');
