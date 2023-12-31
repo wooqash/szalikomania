@@ -9,7 +9,8 @@
     "lint": "npx eslint .",
     "roots": "yarn next-roots",
     "roots:watch": "yarn next-roots -w",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "check:types": "yarn tsc --noEmit"
   },
   "lint-staged": {
     "*.{css,less,scss,html,json,jsx,js,ts,tsx}": [
