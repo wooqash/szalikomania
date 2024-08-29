@@ -1,0 +1,10 @@
+# Ignore artifacts:
+package-lock.json
+build
+coverage
+/node-modules
+/(pages)
+/src/app/(roots)
+/.next
+/.husky
+/public

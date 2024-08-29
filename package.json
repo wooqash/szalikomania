@@ -6,8 +6,27 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint && && npx prettier \"src/**/*.{css,less,scss,html,json,jsx,js,ts,tsx}\"",
-    "lint:fix": "next lint --fix  && npx prettier --write \"src/**/*.{css,less,scss,html,json,jsx,js,ts,tsx}\""
+    "prettier:check": "npx prettier --check .",
+    "prettier:fix": "npx prettier --write .",
+    "lint": "next lint .",
+    "prepare": "husky",
+    "commit": "git cz"
+  },
+  "lint-staged": {
+    "*.{css,less,scss,html,json,jsx,js,ts,tsx}": [
+      "prettier --write ."
+    ],
+    "*.{js,ts,jsx,tsx}": "eslint --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "dependencies": {
     "next": "14.2.7",
@@ -15,13 +34,20 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.4.1",
+    "@commitlint/config-conventional": "^19.4.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.7",
     "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.9",
     "prettier": "3.3.3",
+    "pretty-quick": "^4.0.0",
     "typescript": "^5.4.5"
   }
 }
