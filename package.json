@@ -9,13 +9,22 @@
     "prettier:check": "npx prettier --check .",
     "prettier:fix": "npx prettier --write .",
     "lint": "next lint .",
-    "commit": "npx lint-staged && npx pretty-quick --staged"
+    "commit": "npx lint-staged && npx pretty-quick --staged",
+    "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{css,less,scss,html,json,jsx,js,ts,tsx}": [
-      "prettier --write ."
+    "*.{css,less,scss,html,json,md,mdx}": [
+      "prettier -w"
     ],
-    "*.{js,ts,jsx,tsx}": "eslint --fix"
+    "*.{js,ts,jsx,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
   },
   "dependencies": {
     "next": "14.2.7",
@@ -23,12 +32,17 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.4.1",
+    "@commitlint/config-conventional": "^19.4.1",
+    "@commitlint/cz-commitlint": "^19.4.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "commitizen": "^4.3.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.7",
     "eslint-config-prettier": "^9.1.0",
+    "husky": "^8.0.0",
     "lint-staged": "^15.2.9",
     "prettier": "3.3.3",
     "pretty-quick": "^4.0.0",
