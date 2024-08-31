@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import Menu from "@/app/common/components/Menu/Menu";
-import { commonMetadata } from "@/app/common/shared-metadata";
+import "@/styles/globals.css";
+import Menu from "@/common/components/Menu/Menu";
+import { commonMetadata } from "@/common/shared-metadata";
 import { FC } from "react";
 
 const inter = Inter({ subsets: ["latin"] });

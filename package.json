@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "roots": "yarn next-roots",
-    "roots:watch": "yarn next-roots -w",
-    "dev": "npx roots:watch && next dev",
-    "build": "npx roots && next build",
+    "dev": "npx next dev",
+    "build": "npx next build",
     "start": "next start",
     "prettier:check": "npx prettier --check .",
     "prettier:fix": "npx prettier --write .",
     "lint": "next lint .",
     "commit": "npx lint-staged && npx pretty-quick --staged",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "roots": "npx next-roots",
+    "roots:watch": "npx next-roots -w"
   },
   "lint-staged": {
     "*.{css,less,scss,html,json,md,mdx}": [

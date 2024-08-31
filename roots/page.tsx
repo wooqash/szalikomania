@@ -1,4 +1,4 @@
-import { commonMetadata } from "@/app/common/shared-metadata";
+import { commonMetadata } from "@/common/shared-metadata";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

@@ -1,5 +1,5 @@
-import Menu from "@/app/common/components/Menu/Menu";
-import { commonMetadata } from "../common/shared-metadata";
+import Menu from "@/common/components/Menu/Menu";
+import { commonMetadata } from "@/common/shared-metadata";
 import { Metadata } from "next";
 import { FC } from "react";
 
