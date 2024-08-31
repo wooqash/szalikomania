@@ -6,4 +6,4 @@ coverage
 /.next
 /.husky
 /public
-/json-server
+/json-server/node_modules
