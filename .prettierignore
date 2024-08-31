@@ -2,9 +2,8 @@
 package-lock.json
 build
 coverage
-/node-modules
-/(pages)
-/src/app/(roots)
+/node_modules
 /.next
 /.husky
 /public
+/json-server
