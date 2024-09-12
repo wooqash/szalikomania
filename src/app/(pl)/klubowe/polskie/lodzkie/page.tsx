@@ -2,7 +2,7 @@ import KlubowePolskieLodzkiePageOrigin from "../../../../../../roots/klubowe/pol
 import { Router } from "next-roots";
 
 export default function KlubowePolskieLodzkiePage(props: any) {
-  Router.setPageHref("/en/clubs/poland/lodzkie");
+  Router.setPageHref("/klubowe/polskie/lodzkie");
   {
     /* @ts-ignore */
   }

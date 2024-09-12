@@ -2,7 +2,7 @@ import KlubowePolskieDolnoslaskiePageOrigin from "../../../../../../roots/klubow
 import { Router } from "next-roots";
 
 export default function KlubowePolskieDolnoslaskiePage(props: any) {
-  Router.setPageHref("/en/clubs/poland/lower-silesian");
+  Router.setPageHref("/klubowe/polskie/dolnoslaskie");
   {
     /* @ts-ignore */
   }

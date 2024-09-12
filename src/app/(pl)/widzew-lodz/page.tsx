@@ -8,3 +8,5 @@ export default function WidzewLodzPage(props: any) {
   }
   return <WidzewLodzPageOrigin {...props} pageHref={Router.getPageHref()} />;
 }
+
+export { metadata } from "../../../../roots/widzew-lodz/page";

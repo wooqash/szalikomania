@@ -1,23 +1,39 @@
-import { NextPage } from "next";
-import Head from "next/head";
+import Pagination from "@/common/components/Pagination/Pagination";
+import { commonMetadata } from "@/common/shared-metadata";
+import { Metadata, NextPage } from "next";
 
-const WidzewLodz: NextPage = () => {
+export const metadata: Metadata = {
+  title: `Widzew Łódź - ${commonMetadata.title}`,
+  description: "Szaliki Widzew Łódź",
+};
+
+//take this info from API
+const PHOTOS_PER_PAGE = 10;
+const PHOTOS_TOTAL = 5000;
+
+type PhotosPageProps = {};
+
+const WidzewLodz: NextPage<PhotosPageProps> = async () => {
+  let page = 1;
+
+  const res = await fetch(`http://localhost:3004/photos`, {
+    next: { revalidate: 5 },
+  });
+  if (!res.ok) {
+    throw new Error("problem with getting Widzew Lodz photos");
+  }
+
+  const photos = await res.json();
+
   return (
     <>
-      <Head>
-        <title>Widzew Łódź - Szalikomania</title>
-        <meta
-          property="og:image"
-          content="https://nextjsconf-pics.vercel.app/og-image.png"
-        />
-        <meta
-          name="twitter:image"
-          content="https://nextjsconf-pics.vercel.app/og-image.png"
-        />
-      </Head>
-      <main className="mx-auto max-w-[1960px] p-4 text-white/80">
-        <h1>Widzew Łódź</h1>
-      </main>
+      {photos.map((photo) => (
+        <div key={photo.id}>
+          <img src={photo.thumbnailUrl} />
+          <p>{photo.title}</p>
+        </div>
+      ))}
+      <Pagination page={page} total={PHOTOS_TOTAL} perPage={PHOTOS_PER_PAGE} />
     </>
   );
 };
