@@ -1,0 +1,40 @@
+.heroContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroContainer h1 {
+  margin: 0;
+  font-size: clamp(
+    2rem,
+    -0.5882rem + 12.9412vw,
+    7.5rem
+  ); //320-1000px viewport 32-120px font-size - https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjMyMHB4IiwibWF4V2lkdGgiOiIxMDAwcHgiLCJtaW5Gb250U2l6ZSI6IjMycHgiLCJtYXhGb250U2l6ZSI6IjEyMHB4In0%3D
+  color: rgba(225, 225, 225, 0.01);
+  background-image: url("../../../../public/images/scarves-4.jpeg");
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  animation: animate 45s ease-in-out infinite;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    background-position: left top;
+  }
+  25% {
+    background-position: right bottom;
+  }
+  50% {
+    background-position: left bottom;
+  }
+  75% {
+    background-position: right top;
+  }
+}
