@@ -5,7 +5,8 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 243, 252, 240;
+  --background-rgb: 10, 10, 10;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
@@ -38,6 +39,8 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  --menu-bg: #d62246;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -87,12 +90,8 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: var(--font-josefin-sans);
 }
 
 a {
@@ -104,4 +103,8 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+h1 {
+  font-family: var(--font-yeseva-one);
 }
