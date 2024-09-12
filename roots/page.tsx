@@ -1,3 +1,4 @@
+import Hero from "@/common/components/Hero/Hero";
 import { commonMetadata } from "@/common/shared-metadata";
 import { Metadata } from "next";
 
@@ -8,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <>
+      <Hero />
+    </>
   );
 }

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "@/styles/globals.css";
-import Menu from "@/common/components/Menu/Menu";
-import { commonMetadata } from "@/common/shared-metadata";
-import { FC } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+import "@/styles/globals.scss";
+import { commonMetadata } from "@/common/shared-metadata";
+import { FC, PropsWithChildren, useState } from "react";
+import { RouteLocale } from "next-roots";
+import { yeseva_one, josefin_sans } from "@/styles/font";
+import PageWrapper from "@/common/components/PageWrapper/PageWrapper";
 
 export const metadata: Metadata = {
   title: `${commonMetadata.title}`,
@@ -13,15 +13,17 @@ export const metadata: Metadata = {
 };
 
 type RootLayoutProps = {
-  children: React.ReactNode;
+  locale: RouteLocale;
 };
 
-const RootLayout: FC<RootLayoutProps> = ({ children }) => {
+const RootLayout: FC<PropsWithChildren<RootLayoutProps>> = ({
+  locale,
+  children,
+}) => {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Menu />
-        {children}
+    <html lang={locale}>
+      <body className={`${josefin_sans.variable} ${yeseva_one.variable}`}>
+        <PageWrapper>{children}</PageWrapper>
       </body>
     </html>
   );
