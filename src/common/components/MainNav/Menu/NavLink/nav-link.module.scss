@@ -1,0 +1,29 @@
+.link {
+  align-items: center;
+  border-radius: var(--border-radius-normal);
+  color: var(--menu-link-color);
+  display: flex;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  gap: var(--spacing);
+  height: 50px;
+  line-height: 1;
+  margin-block: 8px;
+  padding-inline: var(--spacing);
+  position: relative;
+  transition: background 0.3s;
+  width: 100%;
+  &:hover {
+    background: var(--menu-link-bg-hover-state-color);
+    color: var(--menu-link-hover-state-color);
+  }
+}
+.active {
+  background: var(--menu-link-bg-active-state-color);
+  color: var(--menu-link-active-state-color);
+  &:focus,
+  &:focus-visible {
+    outline-color: var(--outline-active-color);
+  }
+}

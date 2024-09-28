@@ -1,0 +1,48 @@
+@use "../../../../styles/variables";
+
+.langSelectorList {
+  display: flex;
+  font-weight: var(--font-weight-medium);
+  gap: var(--gap);
+  padding-inline: var(--spacing);
+  position: fixed;
+  right: 0;
+  top: var(--spacing);
+}
+
+.langSelectorList li {
+  a {
+    border-radius: 6px;
+    display: block;
+    height: var(--square-button-size);
+    line-height: var(--square-button-size);
+    position: relative;
+    text-align: center;
+    width: var(--square-button-size);
+
+    &::after {
+      content: "|";
+      position: absolute;
+      right: -5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:hover {
+      background: var(--menu-link-bg-hover-state-color);
+      color: var(--menu-link-hover-state-color);
+      transition: background 0.3s;
+    }
+  }
+  &:last-child a::after {
+    display: none;
+  }
+}
+.langSelectorList :global(li.active) {
+  background: var(--menu-link-bg-active-state-color);
+  color: var(--menu-link-active-state-color);
+  border-radius: var(--border-radius-normal);
+  a:focus,
+  a:focus-visible {
+    outline-color: var(--outline-active-color);
+  }
+}

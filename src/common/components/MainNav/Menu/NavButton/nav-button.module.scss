@@ -1,0 +1,38 @@
+.button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: var(--border-radius-normal);
+  color: var(--menu-link-color);
+  display: flex;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  gap: var(--spacing);
+  height: 50px;
+  line-height: 1;
+  margin-block: 8px;
+  padding-inline: var(--spacing);
+  position: relative;
+  text-align: left;
+  transition:
+    background 0.3s,
+    color 0.15s;
+  width: 100%;
+  span {
+    transition: 0.3s;
+    &:nth-child(2) {
+      flex: 1 1 auto;
+      text-align: right;
+    }
+  }
+  &:hover {
+    background: var(--menu-link-bg-hover-state-color);
+    color: var(--menu-link-hover-state-color);
+  }
+
+  &.active > span:nth-child(2) > svg {
+    rotate: -180deg;
+  }
+}

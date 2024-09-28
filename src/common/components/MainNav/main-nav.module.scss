@@ -1,0 +1,123 @@
+@use "../../../styles/variables";
+
+.mainNavWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: 0.5s;
+  visibility: hidden;
+  z-index: 3;
+
+  height: 100vh;
+  overflow: auto;
+  padding-block: 65px;
+  @media only screen and (max-width: variables.$tablet-breakpoint) {
+    height: 100vh;
+    overflow: auto;
+    padding-block: 80px;
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    background-color: var(--menu-border-color);
+    display: block;
+    height: 1px;
+    padding: 0;
+    margin-block: var(--spacing);
+    @media only screen and (max-width: variables.$tablet-breakpoint) {
+      position: absolute;
+      width: 100%;
+      &:first-of-type {
+        top: 65px;
+      }
+      &:last-of-type {
+        bottom: 65px;
+      }
+    }
+  }
+}
+
+:global(.pageWrapper.open) .mainNavWrapper {
+  opacity: 1;
+  visibility: visible;
+  animation: appear 0.35s both;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    translate: -30px 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.burger {
+  background: transparent;
+  border: 0;
+
+  padding: 0;
+}
+
+.burger,
+.menu {
+  position: fixed;
+}
+
+.burger {
+  background-image: url("/icons/menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: var(--border-radius-normal);
+  display: grid;
+  height: var(--square-button-size);
+  left: var(--spacing);
+  place-items: center;
+  top: var(--spacing);
+  width: var(--square-button-size);
+  z-index: 4;
+  &:hover {
+    background-color: var(--menu-link-bg-hover-state-color);
+  }
+}
+
+:global(.pageWrapper.open) .burger {
+  background-image: url("/icons/close.svg");
+}
+
+.background {
+  aspect-ratio: 1 / 1;
+  background: var(--menu-bg-color);
+  border-radius: var(--border-radius-large);
+  height: 88px;
+  left: 44px;
+  opacity: 0;
+  position: fixed;
+  top: 44px;
+  transition: 0.6s;
+  translate: -50% -50%;
+  z-index: 2;
+  @media only screen and (max-width: variables.$tablet-breakpoint) {
+    transition: background 0.6s;
+  }
+}
+
+:global(.pageWrapper.open) .background {
+  height: 220vh;
+  opacity: 0.95;
+  @media only screen and (max-width: variables.$tablet-breakpoint) {
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    translate: 0;
+    border-radius: 0;
+  }
+}
