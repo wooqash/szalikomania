@@ -1,18 +1,35 @@
 "use client";
 
 import clsx from "clsx";
-import React, { FC, PropsWithChildren, ReactNode, useState } from "react";
-import Menu from "../Menu/Menu";
+import React, { FC, PropsWithChildren, useEffect, useState } from "react";
+import MainNav from "../MainNav/MainNav";
+import { RouteLocale } from "next-roots";
+import { usePathname } from "next/navigation";
 
-type Props = {};
+type PageWrapperProps = {
+  locale: RouteLocale;
+};
 
-const PageWrapper: FC<PropsWithChildren<Props>> = ({ children }) => {
+export const LangContext = React.createContext("pl");
+
+const PageWrapper: FC<PropsWithChildren<PageWrapperProps>> = ({
+  children,
+  locale,
+}) => {
   const [openMenu, setOpenMenu] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    // hide sidebar on path change
+    setOpenMenu(false);
+  }, [pathname]);
   return (
-    <div className={clsx("pageWrapper", openMenu && "open")}>
-      <Menu openMenu={openMenu} setOpenMenu={setOpenMenu} />
-      {children}
-    </div>
+    <LangContext.Provider value={locale}>
+      <div className={clsx("pageWrapper", openMenu && "open")}>
+        <MainNav openMenu={openMenu} setOpenMenu={setOpenMenu} />
+        {children}
+      </div>
+    </LangContext.Provider>
   );
 };
 
