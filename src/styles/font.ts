@@ -23,7 +23,7 @@ export const yeseva_one = Yeseva_One({
   variable: "--font-yeseva-one",
 });
 export const josefin_sans = Josefin_Sans({
-  weight: ["200"],
+  weight: ["200", "400", "500", "700"],
   subsets: ["latin"],
   variable: "--font-josefin-sans",
 });

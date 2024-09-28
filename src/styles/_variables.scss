@@ -4,7 +4,17 @@ $color-verdigris: #17bebb;
 $color-nyanza: #d4f4dd;
 $color-rusty-red: #d62246;
 
+$color-crimson: #e50b36;
+$color-citrine: #e9ce2c;
+
 $color-white: rgb(255, 255, 255);
 $color-honeydew: rgb(243, 252, 240);
 
 $primary-color: #2f4f4f;
+
+/* BREAKPOINTS */
+$large-mobile-breakpoint: 568;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 992px;
+$larger-desktop-breakpoint: 1200px;
+$container-max-width-breakpoint: 1110px;

@@ -1,0 +1,71 @@
+html {
+  box-sizing: border-box;
+}
+* {
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  background-color: transparent;
+  color: inherit;
+  border-width: 0;
+  padding: 0;
+  cursor: pointer;
+}
+figure {
+  margin: 0;
+}
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+ul,
+ol,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+  margin: 0;
+}
+cite {
+  font-style: normal;
+}
+fieldset {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}
+select {
+  appearance: none; // A reset of styles, including removing the default dropdown arrow
+  background-color: transparent; // Additional resets for further consistency
+  border: none;
+  cursor: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0 1em 0 0;
+  width: 100%;
+}
+input[type="date"] {
+  appearance: none;
+}
+
+// Removes arrows from lower versions of IE
+select::-ms-expand {
+  display: none;
+}
