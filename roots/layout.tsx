@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 
-import "@/styles/globals.scss";
+import "@/styles/styles.scss";
 import { commonMetadata } from "@/common/shared-metadata";
-import { FC, PropsWithChildren, useState } from "react";
+import { FC, PropsWithChildren } from "react";
 import { RouteLocale } from "next-roots";
 import { yeseva_one, josefin_sans } from "@/styles/font";
 import PageWrapper from "@/common/components/PageWrapper/PageWrapper";
+import React from "react";
 
 export const metadata: Metadata = {
   title: `${commonMetadata.title}`,
@@ -23,7 +24,7 @@ const RootLayout: FC<PropsWithChildren<RootLayoutProps>> = ({
   return (
     <html lang={locale}>
       <body className={`${josefin_sans.variable} ${yeseva_one.variable}`}>
-        <PageWrapper>{children}</PageWrapper>
+        <PageWrapper locale={locale}>{children}</PageWrapper>
       </body>
     </html>
   );

@@ -1,6 +1,5 @@
 import { search } from "@/lib/cloudinary";
-import { NextApiRequest, NextApiResponse } from "next";
-import { NextRequest } from "next/server";
+import { NextApiResponse } from "next";
 
 export async function GET(request: Request, res: NextApiResponse) {
   const results = await search();
