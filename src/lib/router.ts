@@ -60,6 +60,14 @@ export function getRestOfWorldRepresentationHref(
   return router.getHref("/reprezentacyjne/reszta-swiata", { locale });
 }
 
+export function getExchangeHref(locale: string = getPageLocale()) {
+  return router.getHref("/wymiany", { locale });
+}
+
+export function getSpecialHref(locale: string = getPageLocale()) {
+  return router.getHref("/specjalne", { locale });
+}
+
 export function getContactHref(locale: string = getPageLocale()) {
   return router.getHref("/kontakt", { locale });
 }

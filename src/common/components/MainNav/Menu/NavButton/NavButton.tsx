@@ -8,11 +8,18 @@ import { MdExpandMore } from "react-icons/md";
 type ButtonProps = {
   onClick: (item: string) => void;
   name: string;
+  icon?: JSX.Element;
   isActive: boolean;
   hasSubNav?: boolean;
 };
 
-const NavButton: FC<ButtonProps> = ({ onClick, name, isActive, hasSubNav }) => {
+const NavButton: FC<ButtonProps> = ({
+  onClick,
+  name,
+  icon,
+  isActive,
+  hasSubNav,
+}) => {
   const [pressed, setPressed] = useState(false);
 
   const handleOnClick = () => {
@@ -27,6 +34,7 @@ const NavButton: FC<ButtonProps> = ({ onClick, name, isActive, hasSubNav }) => {
       onClick={handleOnClick}
       className={clsx(styles.button, isActive && styles.active)}
     >
+      {icon && <Icon>{icon}</Icon>}
       <span>{name}</span>
       {hasSubNav && (
         <Icon>

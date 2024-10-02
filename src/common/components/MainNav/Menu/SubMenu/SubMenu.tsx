@@ -34,7 +34,11 @@ const SubMenu: FC<SubMenuProps> = ({ item, items, activeItem }) => {
       <ul ref={navRef}>
         {items.map((item) => (
           <li key={item.name}>
-            {item.href && <NavLink href={item.href}>{item.name}</NavLink>}
+            {item.href && (
+              <NavLink href={item.href} icon={item.icon}>
+                {item.name}
+              </NavLink>
+            )}
           </li>
         ))}
       </ul>

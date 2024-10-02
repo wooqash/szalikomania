@@ -5,41 +5,32 @@ import React, { FC, PropsWithChildren } from "react";
 import styles from "./nav-link.module.scss";
 import clsx from "clsx";
 import { getLocales } from "@/lib/router";
+import Icon from "@/common/components/Icon/Icon";
 
 type NavLinkProps = {
   href: string;
-  //   isActive: boolean;
-  //   activeClassName: string;
-  //   nonActiveClassName: string;
-  //   className: string;
+  icon?: JSX.Element;
 };
 
 const NavLink: FC<PropsWithChildren<NavLinkProps>> = ({
   children,
   href,
-  //   isActive,
-  //   activeClassName,
-  //   nonActiveClassName,
-  //   className,
+  icon,
   ...rest
 }) => {
   const pathname = usePathname();
   const isActive = pathname.endsWith(href) || href === pathname;
-  // (href.includes(pathname) &&
-  //   pathname !== "/" &&
-  //   href.includes(pathname) &&
-  //   pathname !== "/en");
-
-  //   const newClassName = `${isActive ? activeClassName : nonActiveClassName} ${className}`;
-  //   const newClassName = `${isActive ? styles.activeLink : styles.inactiveLink} ${styles.link}`;
   return (
-    <Link
-      href={href}
-      className={clsx(styles.link, isActive && styles.active)}
-      {...rest}
-    >
-      {children}
-    </Link>
+    <>
+      <Link
+        href={href}
+        className={clsx(styles.link, isActive && styles.active)}
+        {...rest}
+      >
+        {icon && <Icon>{icon}</Icon>}
+        {children}
+      </Link>
+    </>
   );
 };
 

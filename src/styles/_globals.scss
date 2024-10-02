@@ -2,7 +2,7 @@
   --max-width: 1100px;
   --border-radius: 12px;
 
-  --color-night-rgb: 10, 10, 10; //#0a0a0a
+  --color-night-rgb: 10, 10, 10; //#0a0a0a //
   --color-ut-orange-rgb: 255, 130, 0; //#ff8200
   --color-amber-rgb: 255, 193, 0; //#ffc100
   --color-white-rgb: 255, 255, 255; //#ffffff
@@ -90,6 +90,7 @@
   --menu-border-color: rgba(var(--color-satin-sheen-gold-rgb), 0.8);
   --menu-link-color: var(--secondary-color);
   --menu-link-bg-hover-state-color: rgb(var(--color-night-rgb));
+  --menu-link-icon-hover-state-color: rgb(var(--color-satin-sheen-gold-rgb));
   --menu-link-hover-state-color: rgb(var(--color-white-rgb));
   --menu-link-bg-active-state-color: rgb(var(--color-satin-sheen-gold-rgb));
   --menu-link-active-state-color: rgb(var(--color-night-rgb));

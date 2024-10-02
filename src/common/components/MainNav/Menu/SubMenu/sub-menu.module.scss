@@ -6,22 +6,6 @@
   }
   button,
   a {
-    padding-left: 54px;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 25px;
-      translate: 0 -50%;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background-color: var(--menu-link-color);
-    }
-    &:hover {
-      &::before {
-        background-color: var(--menu-link-hover-state-color);
-      }
-    }
+    padding-left: calc(var(--spacing) * 3);
   }
 }
