@@ -4,7 +4,6 @@ import { usePathname } from "next/navigation";
 import React, { FC, PropsWithChildren } from "react";
 import styles from "./nav-link.module.scss";
 import clsx from "clsx";
-import { getLocales } from "@/lib/router";
 import Icon from "@/common/components/Icon/Icon";
 
 type NavLinkProps = {
