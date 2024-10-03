@@ -2,6 +2,7 @@ import React from "react";
 import LangSwitcher from "./LangSwitcher/LangSwitcher";
 import { Menu } from "./Menu";
 import styles from "./main-nav.module.scss";
+import SocialNav from "./SocialNav/SocialNav";
 
 type MainNavProps = {
   openMenu: boolean;
@@ -22,6 +23,7 @@ function MainNav({ openMenu, setOpenMenu }: MainNavProps) {
         <hr />
         <Menu />
         <hr />
+        <SocialNav />
       </div>
     </>
   );

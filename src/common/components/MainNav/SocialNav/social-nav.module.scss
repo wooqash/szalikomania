@@ -1,0 +1,32 @@
+@use "../../../../styles/variables";
+
+.socialNav {
+  display: flex;
+  justify-content: center;
+  a {
+    align-items: center;
+    border-radius: 6px;
+    display: flex;
+    height: var(--square-button-size);
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    width: var(--square-button-size);
+
+    span > svg {
+      display: block;
+    }
+
+    &:hover {
+      background: var(--menu-link-bg-hover-state-color);
+      color: var(--menu-link-hover-state-color);
+      transition: background 0.3s;
+    }
+  }
+  @media only screen and (max-width: variables.$tablet-breakpoint) {
+    position: fixed;
+    bottom: var(--spacing);
+    left: 0;
+    width: 100%;
+  }
+}

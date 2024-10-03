@@ -33,18 +33,18 @@ import RuchChorzow from "../../../../assets/icons/ruch-chorzow.svg";
 import ElanaTorun from "../../../../assets/icons/elana-torun.svg";
 
 const menuIcons = {
-  home: <MdHomeFilled />,
-  clubs: <FaPeopleGroup />,
-  polish: <GiPoland />,
-  europe: <GiEuropeanFlag />,
-  world: <IoMdGlobe />,
-  national: <FaPassport />,
-  widzew: <WidzewLodz />,
-  ruch: <RuchChorzow />,
-  elana: <ElanaTorun />,
-  exchanges: <RiExchangeFundsFill />,
-  special: <SiNextra />,
-  contact: <FaPhoneAlt />,
+  home: <MdHomeFilled role="presentation" />,
+  clubs: <FaPeopleGroup role="presentation" />,
+  polish: <GiPoland role="presentation" />,
+  europe: <GiEuropeanFlag role="presentation" />,
+  world: <IoMdGlobe role="presentation" />,
+  national: <FaPassport role="presentation" />,
+  widzew: <WidzewLodz role="presentation" />,
+  ruch: <RuchChorzow role="presentation" />,
+  elana: <ElanaTorun role="presentation" />,
+  exchanges: <RiExchangeFundsFill role="presentation" />,
+  special: <SiNextra role="presentation" />,
+  contact: <FaPhoneAlt role="presentation" />,
 };
 
 const getMenuItems = (locale: string = "pl") => {
